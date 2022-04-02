@@ -9,3 +9,7 @@
 body{
     background-color: black;
 }
+img{
+    max-width: 50%; 
+    height: 40%;
+}
