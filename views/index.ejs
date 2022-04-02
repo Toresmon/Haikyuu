@@ -19,149 +19,164 @@
     <div class="text-center">
         <img src="/img/Haikyuu.png" class="img" alt="...">
       </div>
-    <p class="text-center fs-2 fw-bolder font-monospace">¡Bienvenido, recorre la pagina y conoce un poco más a los personajes de Haikyuu!</p>
+      <% if (creado == false) { %>
+        <p class="text-center fs-2 fw-bolder font-monospace">Mmmm, parece que no estas logueado. ¿Por qué no te creas una cuenta para disfrutar del contenido?</p>
+        <% }%>
+    <% if (creado) { %>
+        <p class="text-center fs-2 fw-bolder font-monospace">¡Bienvenido, recorre la pagina y conoce un poco más a los personajes de Haikyuu!</p>
+        <!-- Carousel wrapper -->
+        <div
+          id="carouselMultiItemExample"
+          class="carousel slide carousel-dark text-center"
+          data-mdb-ride="carousel"
+          >
+          <div class="carousel-inner py-4">
+            <!-- Single item -->
+            <div class="carousel-item active">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="card">
+                        <div class="text-center">
+                            <img
+                            src="/img/K.jpg"
+                            class="card-img-top"
+                            alt="Waterfall"
+                          />
+                          </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Karasuno</h5>
+                        <p class="card-text">
+                          Interactua con las caracteristicas del grupo protagonista
+                        </p>
+                        <a href="/Karasuno" class="btn btn-dark">¡Ingresar!</a>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="col-lg-4 d-none d-lg-block">
+                    <div class="card">
+                        <div class="text-center">
+                            <img
+                            src="/img/N.jpg"
+                            class="card-img-top"
+                            alt="Waterfall"
+                          />
+                          </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Nekoma</h5>
+                        <p class="card-text">
+                            Interactua con las caracteristicas del grupo rival
+                        </p>
+                        <a href="/Nekoma" class="btn btn-dark">¡Ingresar!</a>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="col-lg-4 d-none d-lg-block">
+                    <div class="card">
+                        <div class="text-center">
+                            <img
+                            src="/img/A.jpg"
+                            class="card-img-top"
+                            alt="Waterfall"
+                          />
+                          </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Aoba Johsai</h5>
+                        <p class="card-text">
+                            Interactua con las caracteristicas del grupo rival
+                        </p>
+                        <a href="/Aoba" class="btn btn-dark">¡Ingresar!</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+        
+            
+          </div>
+          <!-- Inner -->
+        </div>
+        <div
+          id="carouselMultiItemExample"
+          class="carousel slide carousel-dark text-center"
+          data-mdb-ride="carousel"
+        >
+          <div class="carousel-inner py-4">
+            <!-- Single item -->
+            <div class="carousel-item active">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="card">
+                        <div class="text-center">
+                            <img
+                            src="/img/F.jpg"
+                            class="card-img-top"
+                            alt="Waterfall"
+                          />
+                          </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Fukurodani</h5>
+                        <p class="card-text">
+                          Interactua con las caracteristicas del grupo rival
+                        </p>
+                        <a href="#!" class="btn btn-dark">¡Ingresar!</a>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="col-lg-4 d-none d-lg-block">
+                    <div class="card">
+                        <div class="text-center">
+                            <img
+                            src="/img/S.jpg"
+                            class="card-img-top"
+                            alt="Waterfall"
+                          />
+                          </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Shiratorizawa</h5>
+                        <p class="card-text">
+                            Interactua con las caracteristicas del grupo rival
+                        </p>
+                        <a href="#!" class="btn btn-dark">¡Ingresar!</a>
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="col-lg-4 d-none d-lg-block">
+                    <div class="card">
+                        <div class="text-center">
+                            <img
+                            src="/img/I.jpg"
+                            class="card-img-top"
+                            alt="Waterfall"
+                          />
+                          </div>
+                      <div class="card-body">
+                        <h5 class="card-title">Inarizaki</h5>
+                        <p class="card-text">
+                            Interactua con las caracteristicas del grupo rival
+                        </p>
+                        <a href="#!" class="btn btn-dark">¡Ingresar!</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+        
+            
+          </div>
+          <!-- Inner -->
+        </div>
+        <!-- Carousel wrapper -->
+        <% } %>
 </body>
 
-<!-- Carousel wrapper -->
-<div
-  id="carouselMultiItemExample"
-  class="carousel slide carousel-dark text-center"
-  data-mdb-ride="carousel"
-  
-  <!-- Inner -->
-  <div class="carousel-inner py-4">
-    <!-- Single item -->
-    <div class="carousel-item active">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="card">
-              <img
-                src="/img/K.jpg"
-                class="card-img-top"
-                alt="Waterfall"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Karasuno</h5>
-                <p class="card-text">
-                  Interactua con las caracteristicas del grupo protagonista
-                </p>
-                <a href="#!" class="btn btn-primary">¡Ingresar!</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 d-none d-lg-block">
-            <div class="card">
-              <img
-                src="/img/N.jpg"
-                class="card-img-top"
-                alt="Sunset Over the Sea"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Nekoma</h5>
-                <p class="card-text">
-                    Interactua con las caracteristicas del grupo rival
-                </p>
-                <a href="#!" class="btn btn-primary">¡Ingresar!</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 d-none d-lg-block">
-            <div class="card">
-              <img
-                src="/img/A.jpg"
-                class="card-img-top"
-                alt="Sunset over the Sea"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Aoba Johsai</h5>
-                <p class="card-text">
-                    Interactua con las caracteristicas del grupo rival
-                </p>
-                <a href="#!" class="btn btn-primary">¡Ingresar!</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    
-  </div>
-  <!-- Inner -->
-</div>
-<div
-  id="carouselMultiItemExample"
-  class="carousel slide carousel-dark text-center"
-  data-mdb-ride="carousel"
-  
-  <!-- Inner -->
-  <div class="carousel-inner py-4">
-    <!-- Single item -->
-    <div class="carousel-item active">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="card">
-              <img
-                src="/img/F.jpg"
-                class="card-img-top"
-                alt="Waterfall"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Karasuno</h5>
-                <p class="card-text">
-                  Interactua con las caracteristicas del grupo rival
-                </p>
-                <a href="#!" class="btn btn-primary">¡Ingresar!</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 d-none d-lg-block">
-            <div class="card">
-              <img
-                src="/img/S.jpg"
-                class="card-img-top"
-                alt="Sunset Over the Sea"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Nekoma</h5>
-                <p class="card-text">
-                    Interactua con las caracteristicas del grupo rival
-                </p>
-                <a href="#!" class="btn btn-primary">¡Ingresar!</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 d-none d-lg-block">
-            <div class="card">
-              <img
-                src="/img/I.jpg"
-                class="card-img-top"
-                alt="Sunset over the Sea"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Aoba Johsai</h5>
-                <p class="card-text">
-                    Interactua con las caracteristicas del grupo rival
-                </p>
-                <a href="#!" class="btn btn-primary">¡Ingresar!</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    
-  </div>
-  <!-- Inner -->
-</div>
-<!-- Carousel wrapper -->
 </html>

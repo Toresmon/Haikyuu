@@ -9,6 +9,7 @@ const bcrypt = require("bcrypt");
 const session = require("express-session");
 const port = 2070;
 let creado = false;
+let selec = 0;
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -46,12 +47,36 @@ app.listen(port, () => {
 });
 
 app.get("/home", (req, res) => {
+        res.render("index",{creado: creado });
+});
+
+app.get("/Karasuno", (req, res) => {
+    selec = 1;
     let sql = `SELECT * FROM karasuno`;
     db.query(sql, (err, data, fields) => {
         if (err) throw err;
-        res.render("index", { data: data, creado: creado });
+        res.render("Equipos", { data: data, creado: creado, selec:selec });
     });
 });
+
+app.get("/Nekoma", (req, res) => {
+    selec = 2;
+    let sql = `SELECT * FROM karasuno`;
+    db.query(sql, (err, data, fields) => {
+        if (err) throw err;
+        res.render("Equipos", { data: data, creado: creado, selec:selec });
+    });
+});
+
+app.get("/Aoba", (req, res) => {
+    selec = 3;
+    let sql = `SELECT * FROM karasuno`;
+    db.query(sql, (err, data, fields) => {
+        if (err) throw err;
+        res.render("Equipos", { data: data, creado: creado, selec:selec });
+    });
+});
+
 
 app.get("/login", (req, res) => {
     res.render("Login");
@@ -78,6 +103,7 @@ app.post("/user", (req, res) => {
 
 app.get("/SingOut", (req, res) => {
     req.session.destroy(function (err) {
+        creado = false;
         console.log("Destruido por salame");
     });
     res.redirect("login");
@@ -111,4 +137,6 @@ app.post("/newuser", (req, res) => {
         }
     });
 });
+
+
 

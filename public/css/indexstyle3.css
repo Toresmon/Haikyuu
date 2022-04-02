@@ -1,0 +1,15 @@
+.titulo {
+    color: rgb(0, 255, 221)
+}
+
+.espacioCard {
+    margin-top: 2cm;
+}
+
+body{
+    background-color: black;
+}
+img{
+    max-width: 50%; 
+    height: 40%;
+}

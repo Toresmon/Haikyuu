@@ -12,16 +12,55 @@
             crossorigin="anonymous"
         />
         <!-- import css -->
+        <% if (selec == 1) { %>
         <link rel="stylesheet" href="/css/indexstyle.css">
+        <% }%>
+
+        <% if (selec == 2) { %>
+            <link rel="stylesheet" href="/css/indexstyle2.css">
+            <% }%>
+
+            <% if (selec == 3) { %>
+                <link rel="stylesheet" href="/css/indexstyle3.css">
+                <% }%>
+
         <link rel="shortcut icon" href="/img/logo.png">
 </head>
 <body>
-    <%-include('fragmentos/navbar')%>
+    <% if (selec == 1) { %>
+        <%-include('fragmentos/navbar')%>
+        <% }%>
+
+        <% if (selec == 2) { %>
+            <%-include('fragmentos/navbar2')%>
+            <% }%>
+
+            <% if (selec == 3) { %>
+                <%-include('fragmentos/navbar3')%>
+                <% }%>
+
     <% if (creado) { %>
-        <div class="text-center">
-            <img src="/img/Haikyuu.png" class="img" alt="...">
-          </div>
-       
+        <% if (selec == 1) { %>
+            <div class="text-center">
+                <img src="/img/karasuno.png" class="img" alt="...">
+              </div>
+           
+            <% }%>
+    
+            <% if (selec == 2) { %>
+                <div class="text-center">
+                    <img src="/img/nekoma.png" class="img" alt="...">
+                  </div>
+               
+                <% }%>
+    
+                <% if (selec == 3) { %>
+                    <div class="text-center">
+                        <img src="/img/aoba.png" class="img" alt="...">
+                      </div>
+                   
+                    <% }%>
+      
         <div class="container">
             <div class="row">
         <% data.forEach (function(i){ %>
